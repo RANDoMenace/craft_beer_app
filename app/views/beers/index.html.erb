@@ -1,0 +1,9 @@
+<h1>The List</h1>
+<p>This is what we got so far...</p>
+
+<ul>
+  <% @beers.each do |beer| %>
+  <!-- <li><%= beer.name %></li> -->
+  <li><%= link_to beer.name, beer_path(beer) %></li>
+  <% end %>
+</ul>
