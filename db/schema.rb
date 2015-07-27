@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150726054155) do
     t.string   "brewery"
     t.string   "city"
     t.string   "description"
+    t.string   "pic_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150726054155) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
+    t.string   "pic_url"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
