@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
 
-  root "beers#index"
+  get 'secret/public_info'
+
+  get 'secret/secret'
+
+  root "welcome#index"
 
   get '/login', to: 'sessions#new'
+
   resources :sessions, only: [:new, :create, :destroy]
-  resources :beers, only: [:index, :show]
+  resources :beers
 
   resources :users
+  delete '/logout', to: 'sessions#destroy'
+
 
   end
