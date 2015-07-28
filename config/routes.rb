@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'secret/public_info'
-
   get 'secret/secret'
 
-  root "welcome#index"
+  root "secret#public_info"
 
   get '/login', to: 'sessions#new'
+  get '/signup', to: 'users#new'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :beers

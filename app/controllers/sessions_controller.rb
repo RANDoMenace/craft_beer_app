@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    user = User.find_by(email:params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_path, notice: "Logged in!"
+      redirect_to secret_secret_path, notice: "Logged in!"
     else
       flash.now.alert = 'Invalid login credentials'
       render 'new'
