@@ -3,5 +3,6 @@ class SecretController < ApplicationController
   end
 
   def secret
+    @beers = CraftBeer.all
   end
 end
