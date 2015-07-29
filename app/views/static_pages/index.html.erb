@@ -1,27 +1,10 @@
 <h1>StaticPages#index</h1>
 <p>Find me in app/views/static_pages/index.html.erb</p>
 
-<h1>The List</h1>
-<p>This is what we got so far...</p>
+  <div>
+  <%= link_to "User Index", users_path %>
+  </div>
+  <div>
+  <%= link_to "The List", craft_beers_path %>
+  </div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
-
-  <% @beers.each do |beer| %>
-  <tr>
-  <!-- <li><%= beer.name %></li> -->
-  <td><%= beer.name %></td>
-  <td><%= link_to "Show", craft_beer_path(beer) %>
-  <td><%= link_to "Edit", edit_craft_beer_path(beer) %></td>
-  <td><%= link_to "Destroy", craft_beer_path(beer),
-          method: :delete,
-          data: { confirm: 'Are you sure?'} %></td>
-  </tr>
-  <% end %>
-</table>
-
-<%= link_to "New Beer", new_craft_beer_path %>
