@@ -3,6 +3,10 @@ class CraftBeersController < ApplicationController
     @beers = CraftBeer.all
   end
 
+  def show
+    @beer = CraftBeer.find(params[:id])
+  end
+
   def new
     @beer = CraftBeer.new
   end
@@ -16,17 +20,24 @@ class CraftBeersController < ApplicationController
     end
   end
 
-  def update
-  end
-
-  def show
+  def edit
     @beer = CraftBeer.find(params[:id])
   end
 
-  def edit
+  def update
+    @beer = CraftBeer.find(params[:id])
+    if @beer.update_attributes(beer_params)
+      redirect_to @beer
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @beer = CraftBeer.find(params[:id])
+    @beer.destroy
+
+    redirect_to main_path
   end
 
    private

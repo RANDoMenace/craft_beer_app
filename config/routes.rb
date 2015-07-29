@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/index'
+
+  get 'static_pages/new'
+
+  get 'static_pages/edit'
+
+  get 'static_pages/show'
+
   root 'secret#public_info'
 
   get '/main', to: 'secret#secret'
