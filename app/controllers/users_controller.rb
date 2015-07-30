@@ -31,7 +31,13 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @beer = CraftBeer.all
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to @user_path
   end
 
   private

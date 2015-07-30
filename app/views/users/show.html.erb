@@ -1,7 +1,14 @@
 <!-- show.html.erb -->
-<%= image_tag @user.pic_url %>
+<div class="container">
+  <h2><%= @user.name %></h2>
+  <%= image_tag @user.pic_url %>
+  <div class="container">
+      <h3>Favorites</h3>
+      <ul>
+    <% @user.craft_beers.each do |beer| %>
+      <li><%= beer.name %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
 
-<%= favorites %>
-<footer>
-  <%= link_to "Back to User Index", users_path %>
-</footer>

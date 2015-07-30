@@ -37,7 +37,7 @@ class CraftBeersController < ApplicationController
     @beer = CraftBeer.find(params[:id])
     @beer.destroy
 
-    redirect_to main_path
+    redirect_to @beer
   end
 
    private
