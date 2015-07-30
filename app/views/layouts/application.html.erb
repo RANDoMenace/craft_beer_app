@@ -14,15 +14,10 @@
     </div>
   <% end %>
 
-  <% if current_user %>
-    <p> hello, <%= current_user.email %></p>
-    <%= link_to 'Logout', logout_path, method: :delete, data: {connfirm: "Are you sure?"} %>
-  <% else %>
-    <%= link_to 'Please login', login_path %>
-    <%= link_to ' / Sign Up', signup_path %>
-  <% end %>
-
+<div class="container">
 <%= yield %>
+</div>
+
 <%= render "shared/footer" %>
 
 </body>

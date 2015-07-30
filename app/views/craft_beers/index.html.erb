@@ -1,18 +1,29 @@
 <h1>The List</h1>
 <p>This is what we got so far...</p>
 
-<ul>
-  <% @beers.each do |beer| %>
-  <!-- <li><%= beer.name %></li> -->
-  <li><%= link_to beer.name, craft_beer_path(beer) %></li>
-  <% end %>
-</ul>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
 
+  <% @beers.each do |beer| %>
+  <tr>
+  <!-- <li><%= beer.name %></li> -->
+  <td><%= beer.name %></td>
+  <td><%= link_to "Show", craft_beer_path(beer) %>
+  <td><%= link_to "Edit", edit_craft_beer_path(beer) %></td>
+  <td><%= link_to "Destroy", craft_beer_path(beer),
+          method: :delete,
+          data: { confirm: 'Are you sure?'} %></td>
+  <td><%= link_to "Fav", craft_beer_favorites_path(beer), method: :create %></td>
+  </tr>
+  <% end %>
+</table>
 <div>
-  <%= link_to "User Index", users_path %>
+  <%= link_to "New Beer", new_craft_beer_path %>
 </div>
-<div>
-  <%= link_to "Main", main_path %>
-</div>
+
 
 

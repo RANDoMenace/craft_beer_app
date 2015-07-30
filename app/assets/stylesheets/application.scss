@@ -16,3 +16,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html, body {
+  background-color: #F0C000;
+  color: #F0F0D8;
+}
+
+.navbar-header {
+  background-color: #F0F0D8;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #111106;
+  color: #F0AC79;
+}
