@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+
   def index
      @beers = CraftBeer.all
   end
@@ -11,4 +12,5 @@ class StaticPagesController < ApplicationController
 
   def show
   end
+
 end

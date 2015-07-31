@@ -48,6 +48,7 @@ before_action :authenticate, only: [:edit, :update, :show, :destroy]
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation, :pic_url)
     end
+
   end
 
 

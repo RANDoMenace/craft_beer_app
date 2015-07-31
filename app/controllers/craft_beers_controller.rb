@@ -1,5 +1,6 @@
 class CraftBeersController < ApplicationController
   before_action :authenticate, only: [:edit, :update, :show, :destroy]
+
   def index
     @beers = CraftBeer.all
   end
@@ -46,4 +47,5 @@ class CraftBeersController < ApplicationController
     def beer_params
       params.require(:craft_beer).permit(:name, :brewery, :city, :description, :pic_url)
     end
+
   end

@@ -9,4 +9,5 @@ class FavoritesController < ApplicationController
     current_user.craft_beers << beer
     redirect_to current_user
   end
+
 end
