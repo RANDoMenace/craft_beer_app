@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+before_action :authenticate, only: [:edit, :update, :show, :destroy]
+
   def index
     @users = User.all
   end
@@ -39,6 +41,7 @@ class UsersController < ApplicationController
 
     redirect_to @user_path
   end
+
 
   private
 

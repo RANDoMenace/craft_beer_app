@@ -1,4 +1,10 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
-
+<div class="container">
+  <h1>Beer Me</h1>
+  <div class="container">
+    <h3><%= @beers.name %></h3>
+    <%= @beers.description %>
+    <%= @beers.abv %>
+    <%= @beers.ibu %>
+    <%= @beers.glasswareId %>
+  </div>
+</div>

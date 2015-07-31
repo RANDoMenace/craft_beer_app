@@ -8,7 +8,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">Beer Craft</a>
+    <a class="navbar-brand" href="/">Skumps</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,7 +16,10 @@
 
     <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
-      <li><%= link_to 'Logout', logout_path, method: :delete, data: {connfirm: "Are you sure?"} %></li>
+      <li><%= link_to "Main", main_path %></li>
+      <li><%= link_to "User Index", users_path %></li>
+      <li><%= link_to "The List", craft_beers_path %></li>
+      <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %></li>
         <% else %>
       <li><%= link_to 'About', new_static_page_path %></li>
       <li><%= link_to 'Login', login_path %></li>

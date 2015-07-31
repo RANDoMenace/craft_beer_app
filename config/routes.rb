@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   # get '/favorites/create/:id', to: 'favorites#create'
 
+  get 'secret/public_info'
+  get 'secret/secret'
 
 
   resources :sessions, only: [:new, :create, :destroy]

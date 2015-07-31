@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+
   def new
     beer = CraftBeer.new
   end

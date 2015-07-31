@@ -1,4 +1,5 @@
 class CraftBeersController < ApplicationController
+  before_action :authenticate, only: [:edit, :update, :show, :destroy]
   def index
     @beers = CraftBeer.all
   end
