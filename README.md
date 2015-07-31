@@ -6,7 +6,7 @@
 * You as a user you will be able to add a favorite beer to your user page.
 * You should be able to add a new beer and add the brewery, a description, and a pic.
 
-##Users Stories
+##Users Stories (MVP)
 
 * As a user I want to be able to login the types of beer I've tried.
 * As a user I want to be able add a new beer if it's not on the list and edit that update.
