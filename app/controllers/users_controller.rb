@@ -12,7 +12,8 @@ before_action :authenticate, only: [:edit, :update, :show, :destroy]
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to users_path
+      session[:user_id] = @user.id.to_s
+      redirect_to current_user
     else
       render 'new'
     end

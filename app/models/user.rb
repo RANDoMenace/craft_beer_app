@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :craft_beers
+  has_many :craft_beers
   has_secure_password
   validates :email, presence: true, uniqueness: true
 end

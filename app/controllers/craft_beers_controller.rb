@@ -15,6 +15,7 @@ class CraftBeersController < ApplicationController
 
   def create
     @beer = CraftBeer.new(beer_params)
+    @beer.user = current_user
     if @beer.save
       redirect_to craft_beers_path
     else
