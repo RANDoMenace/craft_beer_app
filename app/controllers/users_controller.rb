@@ -9,6 +9,10 @@ before_action :authenticate, only: [:edit, :update, :show, :destroy]
     @users = User.new
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -32,15 +36,11 @@ before_action :authenticate, only: [:edit, :update, :show, :destroy]
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
-
   def destroy
     @user = User.find(params[:id])
     @user.destroy
 
-    redirect_to @user_path
+    redirect_to users_path
   end
 
 

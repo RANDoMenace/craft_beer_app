@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get '/main', to: 'static_pages#index'
+  get '/main', to: 'craft_beers#index'
 
   get '/login', to: 'sessions#new'
 

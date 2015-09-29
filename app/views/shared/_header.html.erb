@@ -17,8 +17,7 @@
     <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
       <li><%= link_to "Main", main_path %></li>
-      <li><%= link_to "User Index", users_path %></li>
-      <li><%= link_to "The List", craft_beers_path %></li>
+      <li><%= link_to "User Page", current_user %></li>
       <li><%= link_to 'Logout', logout_path, method: :delete, data: {confirm: "Are you sure?"} %></li>
         <% else %>
       <li><%= link_to 'About', new_static_page_path %></li>
