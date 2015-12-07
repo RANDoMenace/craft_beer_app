@@ -1,9 +1,11 @@
-<%= form_for(@user) do |user| %>
-  <%= user.label :name %>
-  <%= user.text_field :name %>
-  <%= user.label :email %>
-  <%= user.text_field :email %>
-  <%= user.label :pic_url %>
-  <%= user.text_field :pic_url %>
-  <%= user.submit "Submit Beer" %>
-<% end %>
+<div class="container">
+  <%= form_for(@user) do |user| %>
+    <%= user.label :name %>
+    <%= user.text_field :name %>
+    <%= user.label :email %>
+    <%= user.text_field :email %>
+    <%= user.label :pic_url %>
+    <%= user.text_field :pic_url %>
+    <%= user.submit "Submit Beer" %>
+  <% end %>
+</div>
