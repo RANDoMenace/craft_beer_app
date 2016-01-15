@@ -18,9 +18,11 @@ Rails.application.routes.draw do
   resources :craft_beers do
     resources :favorites, only: [:create]
   end
+
   resources :static_pages
 
   resources :users
+  
   delete '/logout', to: 'sessions#destroy'
 
 
